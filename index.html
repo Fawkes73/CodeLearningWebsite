@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeFast Academy</title>
+  <link rel="stylesheet" href="./style.css" />
+
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <h1>Learn Programming the Practical Way</h1>
+    <p>Master C, C++, HTML, Java, and Python with hands-on projects.</p>
+    <button class="cta-btn" onclick="document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' })">Start
+      Now</button>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Choose CodeFast?</h2>
+    <ul>
+      <li>1-on-1 Live Sessions with Expert Instructors</li>
+      <li>Hands-on Project Work to Build Real Skills</li>
+      <li>Regular Tests to Track Your Progress</li>
+      <li>GitHub Setup & Portfolio Guidance</li>
+      <li>Community Support & Career Guidance</li>
+    </ul>
+  </section>
+
+  <section class="testimonial-section">
+    <h2>What Our Students Say</h2>
+    <div class="testimonial">
+      "CodeFast’s live sessions helped me understand programming concepts quickly. The projects were challenging but
+      rewarding!"
+      <div class="testimonial-footer">– Priya S.</div>
+    </div>
+    <div class="testimonial">
+      "The 1-on-1 support made a huge difference in my learning. I landed my first developer job thanks to CodeFast’s
+      portfolio guidance."
+      <div class="testimonial-footer">– Rajesh K.</div>
+    </div>
+    <div class="testimonial">
+      "The practical approach and regular tests kept me motivated throughout the course. Highly recommend to anyone
+      serious about coding."
+      <div class="testimonial-footer">– Anjali M.</div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="project-box">
+      <h2>Portfolio Website</h2>
+      <img src="img1.jpg" alt="Portfolio Website Project" />
+      <p>A personal portfolio website to showcase your skills and projects, built with HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project-box">
+      <h2>Student Record CLI Tool</h2>
+      <img src="img1.jpg" alt="Student Record CLI Tool Project" />
+      <p>A command-line interface program to manage student records, implement CRUD operations in Python or Java.</p>
+    </div>
+  </section>
+
+  <section class="courses-container" id="pricing">
+    <div class="price-legend">
+      <span class="old-price">Cut Price = Old Price (₹800, ₹900)</span> |
+      <span class="new-price">New Price = Discounted Price (₹400, ₹500)</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Old Price/hr</th>
+          <th>New Price/hr</th>
+          <th>Duration</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>C Language</td>
+          <td class="old">₹800</td>
+          <td class="new">₹400</td>
+          <td>15 hours</td>
+        </tr>
+        <tr>
+          <td>HTML</td>
+          <td class="old">₹800</td>
+          <td class="new">₹400</td>
+          <td>15 hours</td>
+        </tr>
+        <tr>
+          <td>C++</td>
+          <td class="old">₹800</td>
+          <td class="new">₹450</td>
+          <td>25 hours</td>
+        </tr>
+        <tr>
+          <td>Python</td>
+          <td class="old">₹900</td>
+          <td class="new">₹500</td>
+          <td>30 hours</td>
+        </tr>
+        <tr>
+          <td>Java</td>
+          <td class="old">₹900</td>
+          <td class="new">₹500</td>
+          <td>30 hours</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+  </section>
+
+  <div>
+    <div class="combo-offer">
+
+      <div class="final-box">
+        <b>🛠 Includes 1 Mini Project + GitHub Page Setup — Others charge ₹8500+, You Get it for ₹3500+
+          only!</b>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 CodeFast Academy. Learn Fast, Learn Smart.
+  </footer>
+
+  <script>
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom >= 0
+      );
+    }
+
+    function handleScroll() {
+      document.querySelectorAll('.project-box').forEach(box => {
+        if (isElementInViewport(box)) {
+          box.classList.add('visible');
+        } else {
+          box.classList.remove('visible'); // <-- remove visible when out of view
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', handleScroll);
+  </script>
+
+
+</body>
+
+</html>
